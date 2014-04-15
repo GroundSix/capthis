@@ -1,5 +1,13 @@
 language: go
 
+before_install:
+  - wget http://www.imagemagick.org/download/ImageMagick.tar.gz
+  - tar xf ImageMagick.tar.gz
+  - cd ImageMagick*
+  - ./configure --prefix=/usr
+  - make
+  - sudo make install
+
 go:
   - 1.0
   - 1.1
