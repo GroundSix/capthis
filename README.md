@@ -43,7 +43,7 @@ $ sudo apt-get install libmagickwand-dev
 ### Installing
 
 ```bash
-$ git clone URL
+$ git clone https://github.com/GroundSix/capthis.git
 $ cd capthis
 $ make
 $ sudo make install
@@ -78,4 +78,4 @@ To be written...
 
 ### License
 
-MIT
+[MIT](https://github.com/GroundSix/capthis/blob/master/LICENSE)
