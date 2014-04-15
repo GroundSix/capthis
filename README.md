@@ -79,7 +79,9 @@ Below are the post fields you must populate:
 
 ### Tests
 
-To be written...
+```bash
+$ make test
+```
 
 ### License
 
