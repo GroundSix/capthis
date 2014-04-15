@@ -22,13 +22,13 @@ You will need:
 
 ##### OS X
 
-**Homebrew**
+Homebrew
 
 ```bash
 $ brew install imagemagick
 ```
 
-**MacPorts**
+MacPorts
 
 ```bash
 $ sudo port install ImageMagick
@@ -72,7 +72,7 @@ Below are the post fields you must populate:
   - `stroke_color` - The stroke color of your text (e.g. 'black')
   - `output` - The full path of the output (e.g. 'my_image.png')
 
-### Test
+### Tests
 
 To be written...
 
