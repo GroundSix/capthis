@@ -6,7 +6,6 @@ before_install:
   - sudo apt-get -y --reinstall install imagemagick
 
 go:
-  - 1.0
   - 1.1
   - 1.2
 

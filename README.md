@@ -21,7 +21,7 @@ in a lot more detail.
 You will need:
 
   - Git
-  - Go
+  - Go (versions 1.1 and 1.2)
   - Make
   - Imagick
 
