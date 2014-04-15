@@ -1,4 +1,5 @@
 BIN_PATH=bin/capthis
+INSTALL_PATH=/usr/local/bin/capthis
 
 all: capthis
 
@@ -9,3 +10,15 @@ dependencies: vendor/
 
 capthis: dependencies main.go
 	go build -o ${BIN_PATH} main.go
+
+install:
+	@cp ${BIN_PATH} ${INSTALL_PATH}
+	@echo "Installed capthis!"
+
+uninstall:
+	@rm -f ${INSTALL_PATH}
+	@echo "Uninstalled capthis"
+
+clean:
+	@echo "Deleting ${BIN_PATH}."
+	rm -f ${BIN_PATH}
