@@ -9,6 +9,11 @@ It runs with a HTTP interface, a server is started and
 image / text data is then sent to allow CapThis to
 process everything and output the final result.
 
+This project is still in development and while it may
+work currently, there is still a lot of work to be done
+that will soon allow you to configure the way it works
+in a lot more detail.
+
 ### Prerequisites
 
 You will need:
