@@ -87,6 +87,8 @@ func (c *Caption) ProcessImage() {
     c.magicWand.WriteImage(c.newImageName)
 
     defer c.magicWand.Destroy()
+    defer c.drawingWand.Destroy()
+    defer c.pixelWand.Destroy()
 }
 
 /**
