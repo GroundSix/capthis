@@ -158,3 +158,29 @@ func (c *Caption) SetNewImageName(newImageName string) {
     c.newImageName = newImageName
 }
 
+/**
+ * Returns our instance of MagickWand
+ *
+ * @return imagick.MagickWand
+ */
+func (c Caption) MagicWand() *imagick.MagickWand  {
+    return c.magicWand
+}
+
+/**
+ * Returns our instance of PixelWand
+ *
+ * @return imagick.PixelWand
+ */
+func (c Caption) PixelWand() *imagick.PixelWand {
+    return c.pixelWand
+}
+
+/**
+ * Returns our instance of DrawingWand
+ *
+ * @return imagick.DrawingWand
+ */
+func (c Caption) DrawingWand() *imagick.DrawingWand {
+    return c.drawingWand
+}

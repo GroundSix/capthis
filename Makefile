@@ -19,6 +19,10 @@ uninstall:
 	@rm -f ${INSTALL_PATH}
 	@echo "Uninstalled capthis"
 
+test:
+	@echo "Running tests:"
+	go test capthis_test.go
+
 clean:
 	@echo "Deleting ${BIN_PATH}."
 	rm -f ${BIN_PATH}
