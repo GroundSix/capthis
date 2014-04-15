@@ -1,0 +1,3 @@
+[submodule "vendor/imagick"]
+	path = vendor/imagick
+	url = https://github.com/GroundSix/imagick.git
