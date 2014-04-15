@@ -1,6 +1,8 @@
 CapThis
 =======
 
+[![Build Status](https://travis-ci.org/GroundSix/capthis.svg?branch=master)](https://travis-ci.org/GroundSix/capthis)
+
 CapThis allows you to give it an image, some text along with
 various other options and then it overlays that text onto
 the image, like a caption.
