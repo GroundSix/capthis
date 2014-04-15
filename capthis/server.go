@@ -17,9 +17,9 @@
 package capthis
 
 import (
-	"log"
-	"strconv"
-	"net/http"
+    "log"
+    "strconv"
+    "net/http"
 )
 
 /**
@@ -29,8 +29,8 @@ import (
  * @return nil
  */
 func StartServer() {
-	http.HandleFunc("/", requestHandler)
-	http.ListenAndServe(":8080", nil)
+    http.HandleFunc("/", requestHandler)
+    http.ListenAndServe(":8080", nil)
 }
 
 /**
@@ -56,20 +56,20 @@ func requestHandler(w http.ResponseWriter, r *http.Request) {
  * @return nil
  */
 func populateCaptionData(r *http.Request) {
-	caption := New()
+    caption := New()
 
-	fontSize, err := strconv.ParseFloat(r.PostFormValue("font_size"), 64)
+    fontSize, err := strconv.ParseFloat(r.PostFormValue("font_size"), 64)
     if err != nil {
         log.Fatal(err)
     }
 
-	caption.SetName(r.PostFormValue("image_name"))
-	caption.SetText(r.PostFormValue("text"))
-	caption.SetFont(r.PostFormValue("font"))
-	caption.SetFontSize(fontSize)
-	caption.SetFillColor(r.PostFormValue("fill_color"))
-	caption.SetStrokeColor(r.PostFormValue("stroke_color"))
-	caption.SetNewImageName(r.PostFormValue("output"))
+    caption.SetName(r.PostFormValue("image_name"))
+    caption.SetText(r.PostFormValue("text"))
+    caption.SetFont(r.PostFormValue("font"))
+    caption.SetFontSize(fontSize)
+    caption.SetFillColor(r.PostFormValue("fill_color"))
+    caption.SetStrokeColor(r.PostFormValue("stroke_color"))
+    caption.SetNewImageName(r.PostFormValue("output"))
 
-	caption.ProcessImage()
+    caption.ProcessImage()
 }

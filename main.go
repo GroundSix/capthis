@@ -17,7 +17,7 @@
 package main
 
 import (
-	"./capthis"
+    "./capthis"
 )
 
 /**
@@ -28,5 +28,5 @@ import (
  * @return nil
  */
 func main() {
-	capthis.StartServer()
+    capthis.StartServer()
 }

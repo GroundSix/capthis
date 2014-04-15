@@ -17,7 +17,7 @@
 package capthis
 
 import (
-	"../vendor/imagick/imagick"
+    "../vendor/imagick/imagick"
 )
 
 /**
@@ -32,17 +32,17 @@ import (
  * @var string name of the new image to be outputted
  */
 type Caption struct {
-	magicWand 	 *imagick.MagickWand
-	pixelWand 	 *imagick.PixelWand
-	drawingWand  *imagick.DrawingWand
+    magicWand    *imagick.MagickWand
+    pixelWand    *imagick.PixelWand
+    drawingWand  *imagick.DrawingWand
 
-	name 		 string
-	text 		 string
-	font 		 string
-	fontSize 	 float64
-	fillColor 	 string
-	strokeColor  string
-	newImageName string
+    name         string
+    text         string
+    font         string
+    fontSize     float64
+    fillColor    string
+    strokeColor  string
+    newImageName string
 }
 
 /**
@@ -53,12 +53,12 @@ type Caption struct {
  * @return Caption
  */
 func New() *Caption {
-	caption := new(Caption)
-	caption.magicWand = imagick.NewMagickWand()
-	caption.pixelWand = imagick.NewPixelWand()
-	caption.drawingWand = imagick.NewDrawingWand()
+    caption := new(Caption)
+    caption.magicWand = imagick.NewMagickWand()
+    caption.pixelWand = imagick.NewPixelWand()
+    caption.drawingWand = imagick.NewDrawingWand()
 
-	return caption
+    return caption
 }
 
 /**
@@ -69,24 +69,24 @@ func New() *Caption {
  * @return nil
  */
 func (c *Caption) ProcessImage() {
-	c.magicWand.ReadImage(c.name)
-	c.magicWand.SetImageMatte(false)
-	c.drawingWand.SetFont(c.font)
-	c.drawingWand.SetFontSize(c.fontSize)
+    c.magicWand.ReadImage(c.name)
+    c.magicWand.SetImageMatte(false)
+    c.drawingWand.SetFont(c.font)
+    c.drawingWand.SetFontSize(c.fontSize)
 
-	// Setting the fill color for the text
-	c.pixelWand.SetColor(c.fillColor)
-	c.drawingWand.SetFillColor(c.pixelWand)
+    // Setting the fill color for the text
+    c.pixelWand.SetColor(c.fillColor)
+    c.drawingWand.SetFillColor(c.pixelWand)
 
-	// Setting the stroke color for the text
-	c.pixelWand.SetColor(c.strokeColor)
-	c.drawingWand.SetFillColor(c.pixelWand)
+    // Setting the stroke color for the text
+    c.pixelWand.SetColor(c.strokeColor)
+    c.drawingWand.SetFillColor(c.pixelWand)
 
-	c.drawingWand.SetGravity(imagick.GRAVITY_CENTER)
-	c.magicWand.AnnotateImage(c.drawingWand, 0, 0, 0, c.text)
-	c.magicWand.WriteImage(c.newImageName)
+    c.drawingWand.SetGravity(imagick.GRAVITY_CENTER)
+    c.magicWand.AnnotateImage(c.drawingWand, 0, 0, 0, c.text)
+    c.magicWand.WriteImage(c.newImageName)
 
-	defer c.magicWand.Destroy()
+    defer c.magicWand.Destroy()
 }
 
 /**
@@ -96,7 +96,7 @@ func (c *Caption) ProcessImage() {
  * @param string image name
  */
 func (c *Caption) SetName(name string) {
-	c.name = name
+    c.name = name
 }
 
 /**
@@ -106,7 +106,7 @@ func (c *Caption) SetName(name string) {
  * @param string image text
  */
 func (c *Caption) SetText(text string) {
-	c.text = text
+    c.text = text
 }
 
 /**
@@ -115,7 +115,7 @@ func (c *Caption) SetText(text string) {
  * @param string text font
  */
 func (c *Caption) SetFont(font string) {
-	c.font = font
+    c.font = font
 }
 
 /**
@@ -124,7 +124,7 @@ func (c *Caption) SetFont(font string) {
  * @param int text font size
  */
 func (c *Caption) SetFontSize(fontSize float64) {
-	c.fontSize = fontSize
+    c.fontSize = fontSize
 }
 
 /**
@@ -133,7 +133,7 @@ func (c *Caption) SetFontSize(fontSize float64) {
  * @param string text fill color
  */
 func (c *Caption) SetFillColor(fillColor string) {
-	c.fillColor = fillColor
+    c.fillColor = fillColor
 }
 
 /**
@@ -142,7 +142,7 @@ func (c *Caption) SetFillColor(fillColor string) {
  * @param string text stroke color
  */
 func (c *Caption) SetStrokeColor(strokeColor string) {
-	c.strokeColor = strokeColor
+    c.strokeColor = strokeColor
 }
 
 /**
@@ -153,5 +153,6 @@ func (c *Caption) SetStrokeColor(strokeColor string) {
  * @param string new image name
  */
 func (c *Caption) SetNewImageName(newImageName string) {
-	c.newImageName = newImageName
+    c.newImageName = newImageName
 }
+
