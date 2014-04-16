@@ -17,10 +17,33 @@
 package capthis
 
 import (
+    "fmt"
     "log"
     "strconv"
     "net/http"
 )
+
+/**
+ * @var string server port
+ */
+type ServerConfig struct {
+    port string
+}
+
+/**
+ * Server constructor that assigns the
+ * port
+ *
+ * @param string server port
+ *
+ * @return ServerConfig
+ */
+func Server(port string) *ServerConfig {
+    server := new(ServerConfig)
+    server.port = ":" + port
+
+    return server
+}
 
 /**
  * Starts the web server that will
@@ -28,9 +51,11 @@ import (
  *
  * @return nil
  */
-func StartServer() {
+func (s ServerConfig) StartServer() {
+    fmt.Println("Server starting on port", s.port)
+
     http.HandleFunc("/", requestHandler)
-    http.ListenAndServe(":8080", nil)
+    http.ListenAndServe(s.port, nil)
 }
 
 /**

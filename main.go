@@ -17,6 +17,7 @@
 package main
 
 import (
+ 	"os"
     "./capthis"
 )
 
@@ -28,5 +29,10 @@ import (
  * @return nil
  */
 func main() {
-    capthis.StartServer()
+	port := "8080"
+	if (len(os.Args) > 1) {
+		port = os.Args[1]
+	}
+	server := capthis.Server(port)
+    server.StartServer()
 }
