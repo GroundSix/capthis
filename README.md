@@ -87,20 +87,20 @@ An example request:
 
 Headers
 
-**Accept:** */*
-**Accept-Encoding:** gzip, deflate, compress
-**Content-Length:** 179
-**Content-Type:** application/x-www-form-urlencoded
+  - **Accept:** */*
+  - **Accept-Encoding:** gzip, deflate, compress
+  - **Content-Length:** 179
+  - **Content-Type:** application/x-www-form-urlencoded
 
 Paramaters
 
-**fill_color:** black
-**font:** /path/to/my/font.ttf
-**font_size:** 32
-**image_name:** /path/to/my/image.png
-**output:** /path/to/output.png
-**stroke_color:** black
-**text:** Hello, World!
+  - **fill_color:** black
+  - **font:** /path/to/my/font.ttf
+  - **font_size:** 32
+  - **image_name:** /path/to/my/image.png
+  - **output:** /path/to/output.png
+  - **stroke_color:** black
+  - **text:** Hello, World!
 
 ```
 image_name=%2Fpath%2Fto%2Fmy%2Fimage.png&text=Hello%2C+World%21&fill_color=black&font_size=32&font=%2Fpath%2Fto%2Fmy%2Ffont.ttf&output=%2Fpath%2Fto%2Foutput.png&stroke_color=black

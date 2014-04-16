@@ -6,6 +6,9 @@ import (
     "./capthis"
 )
 
+/**
+ * capthis.go
+ */
 func TestNew(t *testing.T) {
     caption := capthis.New()
     if (fmt.Sprintf("%T", caption) != "*capthis.Caption") {
