@@ -17,6 +17,7 @@
 package capthis
 
 import (
+    "fmt"
     "log"
     "strconv"
     "net/http"
@@ -51,6 +52,8 @@ func Server(port string) *ServerConfig {
  * @return nil
  */
 func (s ServerConfig) StartServer() {
+    fmt.Println("Server starting on port", s.port)
+
     http.HandleFunc("/", requestHandler)
     http.ListenAndServe(s.port, nil)
 }

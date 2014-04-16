@@ -17,6 +17,7 @@
 package capthis
 
 import (
+    "fmt"
     "../vendor/imagick/imagick"
 )
 
@@ -89,6 +90,8 @@ func (c *Caption) ProcessImage() {
     defer c.magicWand.Destroy()
     defer c.drawingWand.Destroy()
     defer c.pixelWand.Destroy()
+
+    fmt.Println(c.name, "has been written to", c.newImageName)
 }
 
 /**
