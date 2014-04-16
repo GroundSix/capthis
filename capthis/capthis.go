@@ -22,7 +22,7 @@ import (
 )
 
 /**
- * @var imagick.MagickWand instance of MagicWand
+ * @var imagick.MagickWand instance of MagickWand
  * @var imagick.PixelWand instance of PixelWand
  * @var imagick.DrawingWant instance of DrawingWand
  *
@@ -33,7 +33,7 @@ import (
  * @var string name of the new image to be outputted
  */
 type Caption struct {
-    magicWand    *imagick.MagickWand
+    magickWand   *imagick.MagickWand
     pixelWand    *imagick.PixelWand
     drawingWand  *imagick.DrawingWand
 
@@ -55,7 +55,7 @@ type Caption struct {
  */
 func New() *Caption {
     caption := new(Caption)
-    caption.magicWand = imagick.NewMagickWand()
+    caption.magickWand = imagick.NewMagickWand()
     caption.pixelWand = imagick.NewPixelWand()
     caption.drawingWand = imagick.NewDrawingWand()
 
@@ -70,8 +70,8 @@ func New() *Caption {
  * @return nil
  */
 func (c *Caption) ProcessImage() {
-    c.magicWand.ReadImage(c.name)
-    c.magicWand.SetImageMatte(false)
+    c.magickWand.ReadImage(c.name)
+    c.magickWand.SetImageMatte(false)
     c.drawingWand.SetFont(c.font)
     c.drawingWand.SetFontSize(c.fontSize)
 
@@ -84,10 +84,10 @@ func (c *Caption) ProcessImage() {
     c.drawingWand.SetFillColor(c.pixelWand)
 
     c.drawingWand.SetGravity(imagick.GRAVITY_CENTER)
-    c.magicWand.AnnotateImage(c.drawingWand, 0, 0, 0, c.text)
-    c.magicWand.WriteImage(c.newImageName)
+    c.magickWand.AnnotateImage(c.drawingWand, 0, 0, 0, c.text)
+    c.magickWand.WriteImage(c.newImageName)
 
-    defer c.magicWand.Destroy()
+    defer c.magickWand.Destroy()
     defer c.drawingWand.Destroy()
     defer c.pixelWand.Destroy()
 
@@ -166,8 +166,8 @@ func (c *Caption) SetNewImageName(newImageName string) {
  *
  * @return imagick.MagickWand
  */
-func (c Caption) MagicWand() *imagick.MagickWand  {
-    return c.magicWand
+func (c Caption) MagickWand() *imagick.MagickWand  {
+    return c.magickWand
 }
 
 /**

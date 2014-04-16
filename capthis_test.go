@@ -12,7 +12,7 @@ func TestNew(t *testing.T) {
         t.Error("Expected type *capthis.Caption")
     }
 
-    if (fmt.Sprintf("%T", caption.MagicWand()) != "*imagick.MagickWand") {
+    if (fmt.Sprintf("%T", caption.MagickWand()) != "*imagick.MagickWand") {
         t.Error("Expected type *imagick.MagickWand")
     }
 
