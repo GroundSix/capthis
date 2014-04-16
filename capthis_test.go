@@ -27,3 +27,13 @@ func TestNew(t *testing.T) {
         t.Error("Expected type *imagick.DrawingWand")
     }
 }
+
+/**
+ * server.go
+ */
+func TestServer(t *testing.T) {
+    server := capthis.Server("2020")
+    if (fmt.Sprintf("%T", server) != "*capthis.ServerConfig") {
+        t.Error("Expected type *capthis.ServerConfig")
+    }
+}
