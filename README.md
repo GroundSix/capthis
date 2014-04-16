@@ -87,6 +87,7 @@ An example request:
 
 Headers
 
+  - **URL:** http://localhost:8080/
   - **Accept:** */*
   - **Accept-Encoding:** gzip, deflate, compress
   - **Content-Length:** 179
