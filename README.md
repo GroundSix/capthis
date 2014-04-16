@@ -16,6 +16,11 @@ work currently, there is still a lot of work to be done
 that will soon allow you to configure the way it works
 in a lot more detail.
 
+Using an image of a [sunset](https://www.flickr.com/photos/47515486@N05/9100133053/in/photolist-eS9yvK-8WrzYk-fUoFsz-ci8XH-9KeCSN-B3TY2-5RtKw-9qgjB2-g47ReA-g4zyk-2fRFt-fB3Q3T-9MLCEm-5saEMh-8t7YjD-7hDXrE-zmUFy-4zySqx-75xGxj-6dQHRg-4d3L2q-BidzN-5rVtQn-7a49ax-f3WSf7-4tnesA-5qSQgJ-4pR5GY-fh3ZNb-X6BnQ-kwUZd-7qJxop-7zjGac-9nLt95-7Yu691-7Ly4hp-kssmtv-7TmKcw-9isz3v-7ondJK-56Fgwg-JodDf-6kvZAh-7UMuQg-5pj8xf-5ggqda-5GRYNP-5CYFmQ-6Dhbv7-j8MvF/)
+and a [cartoon styled font](http://www.1001freefonts.com/from_cartoon_blocks.font) CapThis generated this:
+
+![An example](https://raw.githubusercontent.com/GroundSix/capthis/master/screenshots/example.png)
+
 ### Prerequisites
 
 You will need:
