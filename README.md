@@ -64,7 +64,11 @@ You can start the server like so:
 $ capthis
 ```
 
-**NOTE**: The above process will be changing soon
+By default CapThis will run on port `8080`. You can change this by specifying:
+
+```bash
+$ capthis 2020
+```
 
 #### Http API
 
@@ -78,6 +82,29 @@ Below are the post fields you must populate:
   - `fill_color` - The fill colour of your text (e.g. 'black')
   - `stroke_color` - The stroke color of your text (e.g. 'black')
   - `output` - The full path of the output (e.g. 'my_image.png')
+
+An example request:
+
+Headers
+
+**Accept:** */*
+**Accept-Encoding:** gzip, deflate, compress
+**Content-Length:** 179
+**Content-Type:** application/x-www-form-urlencoded
+
+Paramaters
+
+**fill_color:** black
+**font:** /path/to/my/font.ttf
+**font_size:** 32
+**image_name:** /path/to/my/image.png
+**output:** /path/to/output.png
+**stroke_color:** black
+**text:** Hello, World!
+
+```
+image_name=%2Fpath%2Fto%2Fmy%2Fimage.png&text=Hello%2C+World%21&fill_color=black&font_size=32&font=%2Fpath%2Fto%2Fmy%2Ffont.ttf&output=%2Fpath%2Fto%2Foutput.png&stroke_color=black
+```
 
 ### Tests
 
