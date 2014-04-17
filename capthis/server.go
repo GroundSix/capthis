@@ -68,7 +68,7 @@ func (s ServerConfig) StartServer() {
  * @return nil
  */
 func requestHandler(w http.ResponseWriter, r *http.Request) {
-    populateCaptionData(r)
+    populateCaptionData(w, r)
 }
 
 /**
@@ -76,11 +76,18 @@ func requestHandler(w http.ResponseWriter, r *http.Request) {
  * sends the image data off to be
  * processed
  *
+ * @param http.ResponseWriter response writer
  * @param http.Request request data
  *
- * @return nil
+ * @return bool
  */
-func populateCaptionData(r *http.Request) {
+func populateCaptionData(w http.ResponseWriter, r *http.Request) bool {
+    errors := ReportErrors(r)
+    if (errors != "") {
+        fmt.Fprintln(w, errors)
+        return false
+    }
+
     caption := New()
 
     fontSize, err := strconv.ParseFloat(r.PostFormValue("font_size"), 64)
@@ -97,4 +104,6 @@ func populateCaptionData(r *http.Request) {
     caption.SetNewImageName(r.PostFormValue("output"))
 
     caption.ProcessImage()
+
+    return true
 }
