@@ -26,7 +26,7 @@ and a [cartoon styled font](http://www.1001freefonts.com/from_cartoon_blocks.fon
 You will need:
 
   - Git
-  - Go (versions 1.1 and 1.2)
+  - Go (versions 1.1 or 1.2)
   - Make
   - Imagick
 
